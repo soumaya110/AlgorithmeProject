@@ -1,0 +1,40 @@
+ALGORITHM Sentence
+
+VAR
+    str := STRING[];
+    
+    nbrC , nbrW , nbrV := INTEGER;
+
+BEGIN
+
+nbrC := 0 ;
+nbrW := 1 ;
+nbrV := 0 ;
+
+   Write("Tape the sentence") ;
+
+   Read(str) ;
+
+   WHILE (str[nbrC] <> ".") DO
+
+   nbrC:=nbrC+1 ;
+   
+    IF (str[nbrC]=" ") THEN
+
+        nbrW=nbrW+1 ;
+    END_IF
+
+    IF (str[nbrC]=["a","e","u","i","o","y"]) THEN
+
+       nbrV=nbrV+1 ;
+    END_IF
+
+   END_WHILE
+
+Write ( "The length of the sentence is : ",nbrC+1 ) ;
+
+Write ("The number of words in the sentence is : ",nbrW) ;
+
+Write ("The number of vowels in the sentence is :",nbrV) ;
+
+END
