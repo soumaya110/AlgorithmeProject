@@ -1,0 +1,65 @@
+ALGORITHM Checkpoint Linear Data Struc(problem1/solution1)
+VAR
+set_1 : ARRAY_OF INTEGER[];
+set_2 : ARRAY_OF INTEGER[];
+sum:INTEGER:=0;
+i:=0;
+j:=0;
+BEGIN
+write(entrer les deux sets svp) ;
+Read(set_1);
+Read(set_2);
+FOR i FROM 0 TO set_1.length-1 STEP 1  DO
+    FOR j FROM 0 TO set_2.length-1 STEP 1 DO
+        IF (set_1[i]<>set_2[j]) THEN
+            sum=sum+set_1[i]
+        END_IF
+    END_FOR
+END_FOR
+
+FOR i FROM 0 TO set_2.length-1 STEP 1  DO
+    FOR j FROM 0 TO set_1.length-1 STEP 1 DO
+        IF (set_2[i]<>set_1[j]) THEN
+            sum=sum+set_2[i]
+        END_IF
+    END_FOR
+END_FOR
+write("the sum of unique integer is " + sum)
+END
+
+ALGORITHM Checkpoint Linear Data Struc(problem2/solution1)
+VAR
+set_1 : ARRAY_OF INTEGER[];
+set_2 : ARRAY_OF INTEGER[];
+sum1:INTEGER:=0;
+sum2:INTEGER:=0;
+i:=0;
+j:=0;
+BEGIN
+write(entrer les deux sets svp) ;
+Read(set_1);
+Read(set_2);
+FOR i FROM 0 TO set_1.length-1 STEP 1  DO
+    FOR j FROM 0 TO set_2.length-1 STEP 1 DO
+        
+        IF (set_1[i]<>set_2[j]) THEN
+            sum1=sum1+set_1[i]
+        ELSE
+          sum2=sum2+set_1[i]
+        END_IF
+    END_FOR
+END_FOR
+
+FOR i FROM 0 TO set_2.length-1 STEP 1  DO
+    FOR j FROM 0 TO set_1.length-1 STEP 1 DO
+       210.
+        IF (set_2[i]<>set_1[j]) THEN
+            sum1=sum1+set_2[i]
+       ELSE
+        sum2=sum2+set_2[i]
+       END_IF
+    END_FOR
+END_FOR
+write("the sum of unique integer is " + sum1);
+write("the sum of duplicated integer is " + sum2);
+
