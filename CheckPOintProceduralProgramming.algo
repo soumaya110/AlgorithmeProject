@@ -1,0 +1,52 @@
+//using a procedure
+PROCEDURE dot_product(arr1,arr2:ARRAY_OF INTEGER[])
+  VAR
+    i:INTEGER :=0 ;
+    product:INTEGER :=0;
+  BEGIN
+    FOR i FROM 0 TO arr1.length-1 STEP 1  DO
+         product = product+arr1[i]*arr2[i];
+        END_FOR
+  END
+
+ALGORITHM IsOrthogonal
+VAR
+   arr1 : ARRAY_OF INTEGER[];
+    arr2 : ARRAY_OF INTEGER[];
+    result:=0;  
+BEGIN
+ dot_product(arr1,arr2)=result
+   IF (result=0) THEN
+        return("les 2 tableaux sont orthogonaux");
+       ELSE
+        return("les 2 tableaux ne sont pas orthogonaux");
+       END_IF 
+END
+//  using a function 
+
+    FUNCTION  dot_productFun(arr1,arr2:ARRAY_OF INTEGER[]) : INTEGER 
+    VAR
+
+    i:INTEGER :=0 ;
+    product:INTEGER :=0;
+    BEGIN
+        FOR i FROM 0 TO arr1.length-1 STEP 1  DO
+         product = product+arr1[i]*arr2[i];
+
+        END_FOR
+       return product
+       
+    END
+
+ ALGORITHM IsOrthogonal1
+VAR
+    arr1 : ARRAY_OF INTEGER[];
+    arr2 : ARRAY_OF INTEGER[];
+BEGIN 
+  
+   IF (dot_productFun(arr1,arr2)=0) THEN
+        return("les 2 tableaux sont orthogonaux");
+       ELSE
+        return("les 2 tableaux ne sont pas orthogonaux");
+       END_IF 
+END
